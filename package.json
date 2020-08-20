@@ -1,22 +1,29 @@
 {
   "name": "demo",
+  "comType": "Chart-Bar-Normal",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "buildCom": "./node_modules/.bin/vue-cli-service  build --target lib --name $npm_package_comType 'src/views/index.vue'",
+    "buildTmp": "./node_modules/.bin/vue-cli-service  build --target lib --name $npm_package_comType 'src/views/tmp.vue'"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
+    "ant-design-vue": "^1.2.4",
+    "core-js": "^2.6.11",
+    "echarts": "^4.8.0",
     "vue": "^2.6.10",
+    "vue-json-editor": "^1.4.2",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
-    "less": "^3.0.4",
+    "less": "^2.7.3",
     "less-loader": "^5.0.0",
+    "vue-cli-plugin-ant-design": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
   },
   "postcss": {
